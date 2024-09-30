@@ -1,0 +1,13 @@
+.p-no-margin p {
+	margin: 0;
+}
+
+.white-icon svg {
+	fill: #ffffff !important;
+	transition: 0.3s;
+}
+
+.white-icon a:hover svg {
+	fill: #ffffff85 !important;
+	transition: 0.3s;
+}

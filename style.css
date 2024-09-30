@@ -1,0 +1,26 @@
+/*!
+Theme Name: Bright Red Development
+GitHub Theme URI: /brightreddigital/brightred_wp_theme
+GitHub Theme URI: https://github.com/brightreddigital/brightred_wp_theme
+Author: Robert Clarke
+Author URI: https://brightred.digital
+Version: 0.0.3
+
+=======================
+
+N.B. This stylesheet is for Bright Red Theme only. Individual site content css can be found in Elementor's 'custom css'.
+
+=======================
+
+/* ===============
+	Imports 
+=============== */
+
+@import 'inc/css/reset.css';
+@import 'inc/css/helpers.css';
+
+
+/* Root colours */
+
+
+
