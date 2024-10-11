@@ -1,0 +1,151 @@
+/* Variables 
+
+	Brand Primary 		 var(--e-global-color-secondary);
+	Field Stroke 		 var(--e-global-color-0d390df);
+	Fleld Background 	 var(--e-global-color-6aec038);
+	Field Text 			 var(--e-global-color-e98ed05);
+
+*/
+
+/*.elementor-field-group:not(.elementor-field-type-upload) .elementor-field:not(.elementor-select-wrapper):focus, 
+.elementor-field-group .elementor-select-wrapper select:focus {
+	box-shadow: none;
+	border-bottom-color: var(--e-global-color-0d390df);
+}*/
+
+.select-caret-down-wrapper {
+	display: none;
+}
+
+.elementor-select-wrapper:before {
+	display: block;
+	width: 10px;
+	height: 10px;
+	content: "";
+	border-right: 2px solid var(--e-global-color-e98ed05);
+	border-top: 2px solid var(--e-global-color-e98ed05);
+	transform: translateY(-75%) rotate(135deg) !important;
+}
+
+.elementor-field-textual {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.elementor-field-type-checkbox input[type="checkbox"],
+.elementor-field-type-acceptance input[type="checkbox"], 
+.elementor-field-type-radio input[type="radio"] {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.elementor-field-type-radio > div label:before {
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-right: 0.5em;
+	border-radius: 100%;
+	vertical-align: -3px;
+	border: 1px solid var(--e-global-color-0d390df);
+	background-color: var(--e-global-color-6aec038);
+	background-clip: content-box;
+	transition: all 0.2s ease;
+}
+
+.elementor-field-type-radio > div label {
+	margin-right: 1em;
+}
+
+.elementor-field-type-radio > div input:hover + label:before {
+	border-color: var(--e-global-color-0d390df);
+}
+
+.elementor-field-type-radio > div input:checked + label:before {
+	background-color: var(--e-global-color-e98ed05);
+	border-color: var(--e-global-color-0d390df);
+	padding: 0.15em;
+}
+
+.elementor-field-type-acceptance > div label:before,
+.elementor-field-type-checkbox div label:before {
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-right: 0.5em;
+	vertical-align: -3px;
+	border: 1px solid rgba(0,0,0,0.25);
+	border-radius: 0;
+	background-color: var(--e-global-color-6aec038);
+	background-clip: content-box;
+	transition: all 0.2s ease;
+}
+
+.elementor-field-type-acceptance > div label,
+.elementor-field-type-checkbox > div label {
+	margin-right: 1em;
+	position: relative;
+}
+
+.elementor-field-type-acceptance > div label:after,
+.elementor-field-type-checkbox > div label:after {
+	border-right: 2px solid var(--e-global-color-e98ed05);
+	border-top: 2px solid var(--e-global-color-e98ed05);
+	content: "";
+	height: 13px;
+	left: 1px;
+	position: absolute;
+	top: 11px;
+	transform: scaleX(-1) rotate(135deg);
+	transform-origin: left top;
+	width: 8px;
+	display: none;
+}
+
+.elementor-field-type-acceptance > div input:hover + label:before,
+.elementor-field-type-checkbox > div input:hover + label:before {
+	border-color: var(--e-global-color-0d390df);
+}
+
+.elementor-field-type-acceptance > div input:checked + label:before,
+.elementor-field-type-checkbox > div input:checked + label:before {
+	border-color: var(--e-global-color-0d390df);
+	background: var(--e-global-color-6aec038);
+}
+
+.elementor-field-type-acceptance > div input:checked + label:after,
+.elementor-field-type-checkbox > div input:checked + label:after {
+	-moz-animation: check 0.8s ease 0s running;
+	-webkit-animation: check 0.8s ease 0s running;
+	animation: check 0.8s ease 0s running;
+	display: block;
+	width: 8px;
+	height: 13px;
+	border-color: var(--e-global-color-e98ed05);
+}
+
+@keyframes check {
+	0% {
+		height: 0;
+		width: 0;
+	}
+
+	25% {
+		height: 0;
+		width: 8px;
+	}
+
+	50% {
+		height: 13px;
+		width: 8px;
+	}
+}
+
+

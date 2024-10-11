@@ -11,6 +11,8 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '0.0.1' );
 }
 
+// Includes
+
 $roots_includes = array(
 	'/inc/functions/class-tgm-plugin-activation.php',
 	'/inc/functions/clean.php',
@@ -29,6 +31,8 @@ foreach($roots_includes as $file){
 require_once $filepath;
 }
 
+// Link to developer resources in admin area
+
 unset($file, $filepath); 
 
 function wpdocs_custom_admin_footer_text() {
@@ -36,9 +40,28 @@ function wpdocs_custom_admin_footer_text() {
 }
 add_filter( 'admin_footer_text', 'wpdocs_custom_admin_footer_text' );
 
-
+// Shortcodes
 function siteURL() {
 	echo '<span>' . get_site_url() . '</span>';
 }
 
 add_shortcode('siteURL', 'siteURL');
+
+
+// Remove menu items if not admin
+
+
+
+	function remove_menus(){
+
+		 if( !current_user_can( 'administrator' ) ){
+
+			remove_menu_page( 'tools.php' );
+
+		}
+
+	};
+
+	add_action( 'admin_menu', 'remove_menus' );
+
+
