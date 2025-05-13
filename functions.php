@@ -50,21 +50,18 @@ add_shortcode('siteURL', 'siteURL');
 
 // Remove menu items if not admin
 
-function remove_menus(){
 
-	 if( !current_user_can( 'administrator' ) ){
 
-		remove_menu_page( 'tools.php' );
+	function remove_menus(){
 
-	}
+		 if( !current_user_can( 'administrator' ) ){
 
-};
+			remove_menu_page( 'tools.php' );
 
-add_action( 'admin_menu', 'remove_menus' );
+		}
 
-// Google Maps API
+	};
 
-function my_acf_init() {
-    acf_update_setting('google_api_key', the_field('google_maps_api_key'););
-}
-add_action('acf/init', 'my_acf_init');
+	add_action( 'admin_menu', 'remove_menus' );
+
+
