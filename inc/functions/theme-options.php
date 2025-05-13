@@ -534,6 +534,54 @@ function add_local_field_groups() {
 	'show_in_rest' => 0,
 ) );
 
+	acf_add_local_field_group( array(
+	'key' => 'group_682350a76b278',
+	'title' => 'Google Maps',
+	'fields' => array(
+		array(
+			'key' => 'field_682350a7db8e9',
+			'label' => 'Google Maps API Key',
+			'name' => 'google_maps_api_key',
+			'aria-label' => '',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'maxlength' => '',
+			'allow_in_bindings' => 0,
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'basic-info',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+	'show_in_rest' => 0,
+) );
+
+
+
 	endif;
 
 }
