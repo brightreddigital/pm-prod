@@ -2,6 +2,10 @@
 	margin: 0;
 }
 
+.p-no-bottom-margin p:last-of-type {
+	margin-bottom: 0;
+}
+
 .white-icon svg {
 	fill: #ffffff !important;
 	transition: 0.3s;
