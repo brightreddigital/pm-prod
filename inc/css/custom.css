@@ -148,4 +148,7 @@
 	}
 }
 
+.has-submenu .highlighted {
+	border: 0 !important;
+}
 
