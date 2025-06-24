@@ -31,8 +31,6 @@
     const now = new Date();
     now.setTime(now.getTime() + (days * 24 * 60 * 60 * 1000));
     const expires = now.toUTCString();
-    const cookieDomain = getCookieDomain();
-    const domainPart = '';
 
     document.cookie = `${name}=${value};expires=${expires};path=/;SameSite=Lax;Secure`;
 
