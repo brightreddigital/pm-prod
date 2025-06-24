@@ -32,18 +32,10 @@
     now.setTime(now.getTime() + (days * 24 * 60 * 60 * 1000));
     const expires = now.toUTCString();
     const cookieDomain = getCookieDomain();
-    const domainPart = cookieDomain ? `domain=${cookieDomain};` : '';
+    const domainPart = '';
 
-    document.cookie = `${name}=${value};expires=${expires};path=/;${domainPart}SameSite=Lax;Secure`;
-  }
+    document.cookie = `${name}=${value};expires=${expires};path=/;SameSite=Lax;Secure`;
 
-  function getCookieDomain() {
-    const host = window.location.hostname;
-    const parts = host.split('.');
-    if (parts.length >= 2) {
-      return '.' + parts.slice(-2).join('.');
-    }
-    return '';
   }
 
   function readCookie(name) {
