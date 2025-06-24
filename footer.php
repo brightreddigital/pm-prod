@@ -38,16 +38,27 @@ window.dataLayer = window.dataLayer || [];
 
 function setCookie(name, value, days) {
   var now = new Date();
-  var time = now.getTime();
-  var expireTime = time + 1000 * 3600 * 24 * days;
-  now.setTime(expireTime);
+  now.setTime(now.getTime() + (days * 24 * 60 * 60 * 1000));
+  var expires = now.toUTCString();
 
-  // Define the domain based on your website's domain structure
-  // Setting the cookie for all subdomains of tj-da.com
-  var cookieDomain = '.tj-da.com';
+  var cookieDomain = getCookieDomain();
+  var domainPart = cookieDomain ? `domain=${cookieDomain};` : '';
 
-  document.cookie = name + '=' + value + ';expires=' + now.toGMTString() + ';path=/;domain=' + cookieDomain + ';';
+  document.cookie = `${name}=${value};expires=${expires};path=/;${domainPart}`;
 }
+
+function getCookieDomain() {
+  const host = window.location.hostname;
+
+  // For subdomains
+  const parts = host.split('.');
+  if (parts.length >= 2) {
+    return '.' + parts.slice(-2).join('.');
+  }
+
+  return '';
+}
+
 
 
 function readCookie(name) {
